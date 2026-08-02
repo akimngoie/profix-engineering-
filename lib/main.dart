@@ -3,13 +3,13 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   // We will put your Supabase keys here later
   await Supabase.initialize(
-    url: 'YOUR_SUPABASE_URL',
-    anonKey: 'YOUR_SUPABASE_ANON_KEY',
+    url: 'https://tfkyhusvrcqvthttsevo.supabase.co',
+    anonKey: 'sb_publishable_M4UUXOaNH7rX_Xc6zj1ggA_3ZoBQmAK',
   );
-  
+
   runApp(const ProFixApp());
 }
 
@@ -25,7 +25,6 @@ class ProFixApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomePage(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -38,12 +37,13 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('ProFix Engineering'),
+        backgroundColor: Colors.blue,
       ),
       body: const Center(
         child: Text(
-          'Welcome to ProFix Quoting App\nConnected to Supabase soon!',
+          'Welcome to ProFix Engineering!\nConnected to Supabase',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 18),
+          style: TextStyle(fontSize: 20),
         ),
       ),
     );
